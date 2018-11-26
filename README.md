@@ -71,7 +71,7 @@ helm ls # will through an error "Error: transport is closing"
 helm ls --tls # will not trhough anything at this point
 ```
 
-## Tiller unistallation
+## Tiller uninstallation
 
 Remove the Tiller component from the K8s cluster
 
