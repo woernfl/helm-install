@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- Helm client installation: <https://docs.helm.sh/using_helm/#installing-helm>
+- [Helm client installation](https://docs.helm.sh/using_helm/#installing-helm)
 
 ## Tiller initialisation
 
