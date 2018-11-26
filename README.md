@@ -21,7 +21,27 @@ kubectl apply -f ClusterRoleBinding.yaml
 Initialize Tiller
 
 ```bash
-helm init --service-account tiller
+helm init --service-account tiller --override 'spec.template.spec.containers[0].command'='{/tiller,--storage=secret}'
+```
+
+## Tiller unistallation
+
+Remove the Tiller component from the K8s cluster
+
+```bash
+helm reset --force
+```
+
+Delete cluster role binding
+
+```bash
+kubectl delete -f ClusterRoleBinding.yaml
+```
+
+Delete "tiller" service account
+
+```bash
+kubectl delete -f ServiceAccount.yaml
 ```
 
 ## Bonus
