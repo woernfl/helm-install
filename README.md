@@ -1,4 +1,4 @@
-# HELM initialization
+# HELM management
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ We will:
 
 - create Tiller clients and servers CA and certificates
 - create Tiller Service account and Cluster Role Binding
-- intialise Tiller using previously generated certificates, RBAC and secret storage
+- intialise Tiller using previously generated certificates, RBAC and specifying secret storage
 - configure Helm client to connect to Tiller
 
 Generate a Certificate Authority
@@ -68,7 +68,7 @@ Test helm connection
 
 ```bash
 helm ls # will through an error "Error: transport is closing"
-helm ls --tls # will not trhough anuthing at this point
+helm ls --tls # will not trhough anything at this point
 ```
 
 ## Tiller unistallation
