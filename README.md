@@ -71,6 +71,16 @@ helm ls # will through an error "Error: transport is closing"
 helm ls --tls # will not trhough anything at this point
 ```
 
+## Tiller upgrade
+
+First we need to update the Helm client, do to so, you can just follow the Helm installation guide listed in the [prerequisites](#Prerequisites) section.
+
+Once done, we need to upgrade the Tiller component by typing the following command:
+
+```bash
+helm init --upgrade
+```
+
 ## Tiller uninstallation
 
 Remove the Tiller component from the K8s cluster
